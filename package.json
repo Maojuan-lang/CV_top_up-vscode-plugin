@@ -1,0 +1,44 @@
+{
+    "name": "TopUpCV",
+    "displayName": "CV_top_up-vscode",
+    "description": "Top up the CV buttons in context menu.",
+    "publisher": "maojuan",
+    "version": "1.1.0",
+    "engines": {
+        "vscode": "^1.89.1"
+    },
+    "activationEvents": [
+        "onCommand:extension.copyIt",
+        "onCommand:extension.pasteIt"
+    ],
+    "icon": "images/icon.jpg",
+    "main": "extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.copyIt",
+                "title": "Copy It"
+            },
+            {
+                "command": "extension.pasteIt",
+                "title": "Paste It"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.copyIt",
+                    "group": "!!!cvx"
+                },
+                {
+                    "command": "extension.pasteIt",
+                    "group": "!!!cvx"
+                }
+            ]
+        }
+    },
+    "dependencies": {
+        "@vscode/vsce": "^2.15.0",
+        "vsce": "^2.15.0"
+    }
+}
