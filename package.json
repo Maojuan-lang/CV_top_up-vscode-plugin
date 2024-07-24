@@ -3,7 +3,7 @@
     "displayName": "CV_top_up-vscode",
     "description": "Top up the CV buttons in context menu.",
     "publisher": "maojuan",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "engines": {
         "vscode": "^1.89.1"
     },
@@ -22,6 +22,10 @@
             {
                 "command": "extension.pasteIt",
                 "title": "Paste It"
+            },
+            {
+                "command": "extension.cutIt",
+                "title": "Cut It"
             }
         ],
         "menus": {
@@ -32,6 +36,10 @@
                 },
                 {
                     "command": "extension.pasteIt",
+                    "group": "!!!cvx"
+                },
+                {
+                    "command": "extension.cutIt",
                     "group": "!!!cvx"
                 }
             ]
